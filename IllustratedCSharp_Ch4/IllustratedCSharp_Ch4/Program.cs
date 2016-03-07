@@ -14,7 +14,8 @@ namespace IllustratedCSharp_Ch4
     class DaysTemp                              //Declare the class
     {
         public int high, low;                   //Declare the instance fields
-        public int average()
+
+        public int average()                    //Declare a method
         {
             return (high + low) / 2;
         }
@@ -28,7 +29,7 @@ namespace IllustratedCSharp_Ch4
             DaysTemp T1 = new DaysTemp();
             DaysTemp T2 = new DaysTemp();
 
-            //Write tow the fields of each instance
+            //Write to the fields of each instance
             T1.high = 76;   T1.low = 57;
             T2.high = 75;   T2.low = 53;
 
