@@ -26,8 +26,8 @@ namespace IllustratedCSharp_Ch4
         static void Main(string[] args)
         {
             //Create two instances of DaysTemp
-            DaysTemp T1 = new DaysTemp();
-            DaysTemp T2 = new DaysTemp();
+            DaysTemp T1 = new DaysTemp();       //Both of object creations are syntactically the same
+            var T2 = new DaysTemp();            //Because the DaysTemp class can be inferred.
 
             //Write to the fields of each instance
             T1.high = 76;   T1.low = 57;
