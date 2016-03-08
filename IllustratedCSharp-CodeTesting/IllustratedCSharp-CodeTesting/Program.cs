@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace IllustratedCSharp_CodeTesting
 {
+    #region Class X, Constants
     class X
     {
         public const double pi = 3.14159;
     }
+    #endregion
 
+    #region Class D, Static members
     class D
     {
         int mem1;
@@ -29,11 +32,31 @@ namespace IllustratedCSharp_CodeTesting
             Console.WriteLine($"{str}: mem1 = {mem1}, mem2 = {mem2}");
         }
     }
+    #endregion
+
+    #region Class C1, properties
+    class C1
+    {
+        private int theRealValue = 10;          //Backing Field memory allocated (Camel Casing)
+        public int TheRealValue                  //Property, no memory allocated (Pascal Casing)
+        {
+            set
+            {
+                theRealValue = value;           //Sets the value of field theRealValue
+            }
+            get
+            {
+                return theRealValue;            //Gets the value of the field theRealValue
+            }
+        }
+    }
+    #endregion
 
     class Program
     {
         static void Main(string[] args)
         {
+            //Class D
             //Create two instances of class D
             D d1 = new D();
             D d2 = new D();
@@ -46,7 +69,15 @@ namespace IllustratedCSharp_CodeTesting
 
             d1.Display("d1");
 
-            Console.WriteLine($"Pi = {X.pi}");
+            //Class X
+            Console.WriteLine($"Pi = {X.pi}\n\n");
+
+            //Class C1
+            C1 c = new C1();
+            Console.WriteLine($"myValue:    {c.TheRealValue}");
+
+            c.TheRealValue = 20;
+            Console.WriteLine($"myValue:    {c.TheRealValue}");
         }
     }
 }
