@@ -13,8 +13,11 @@ namespace IllustratedCSharp_Ch5_Fig5._10
     {
         static void RefAsParameter(ref MyClass f1)
         {
+            //Assign to the object member
             f1.val = 50;
             Console.WriteLine($"After member assignment:     {f1.val}");
+
+            //Create a new object and assign it to the formal parameter
             f1 = new MyClass();
             Console.WriteLine($"After new object creation:   {f1.val}");
         }
