@@ -97,7 +97,7 @@ namespace IllustratedCSharp_CodeTesting
             d1.Display("d1");
 
             //Class X
-            Console.WriteLine($"Pi = {X.pi}\n\n");
+            Console.WriteLine($"\n\nPi = {X.pi}\n\n");
 
             //Class C1
             C1 c = new C1();
