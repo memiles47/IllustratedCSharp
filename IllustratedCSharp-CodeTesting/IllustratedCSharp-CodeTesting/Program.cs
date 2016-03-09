@@ -52,6 +52,33 @@ namespace IllustratedCSharp_CodeTesting
     }
     #endregion
 
+    #region Class1, Indexers
+    class Class1
+    {
+        int temp0;                          //Private field
+        int temp1;                          //Private field
+
+        public int this[int index]
+        {
+            get                             //Return value of either temp0 or temp1
+            {
+                return index == 0 ? temp0 : temp1;
+            }
+            set
+            {
+                if (index == 0)
+                {
+                    temp0 = value;
+                }
+                else
+                {
+                    temp1 = value;
+                }
+            }
+        }
+    }
+    #endregion
+
     class Program
     {
         static void Main(string[] args)
@@ -77,7 +104,15 @@ namespace IllustratedCSharp_CodeTesting
             Console.WriteLine($"myValue:    {c.TheRealValue}");
 
             c.TheRealValue = 20;
-            Console.WriteLine($"myValue:    {c.TheRealValue}");
+            Console.WriteLine($"myValue:    {c.TheRealValue}\n\n");
+
+            //class Class1
+            Class1 a = new Class1();
+            Console.WriteLine($"Values -- T0: {a[0]}, T1: {a[1]}");
+
+            a[0] = 15; a[1] = 20;
+
+            Console.WriteLine($"Values -- T0: {a[0]}, T1: {a[1]}");
         }
     }
 }
