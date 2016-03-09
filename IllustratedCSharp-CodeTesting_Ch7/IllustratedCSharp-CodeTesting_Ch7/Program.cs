@@ -34,6 +34,11 @@ namespace IllustratedCSharp_CodeTesting_Ch7
         {
             Console.WriteLine($"Derived class -- Masked Method2: {value}");
         }
+
+        public void Method3(string value)
+        {
+            Console.WriteLine($"Derived class -- Base Accessed field2: {base.field2}");
+        }
     }
     class Program
     {
@@ -51,7 +56,7 @@ namespace IllustratedCSharp_CodeTesting_Ch7
             //Inheritance with two classes, masking a field and a method
             AC.Method1(AC.field1);      //Base method with base field
             AC.Method2(AC.field2);      //Masked method with masked derived field
-            
+            AC.Method3("");
         }
     }
 }
