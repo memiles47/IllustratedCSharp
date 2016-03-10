@@ -62,11 +62,15 @@ namespace IllustratedCSharp_CodeTesting_Ch7
 
             SecondDerived Derived = new SecondDerived();    //Used SecondDerived
             MyBaseClass MyBC =  (MyBaseClass)Derived;       //Use MyBaseClas
+            MyDerivedClass myDerived = new MyDerivedClass();//Used MyDerivedClass
 
             Derived.Print();
             MyBC.Print();
             Console.WriteLine("\n*\n*\n");
 
+            Console.WriteLine($"myDerived.myProperty = {myDerived.myProperty}");
+            Console.WriteLine($"MyBC.myProperty = {MyBC.myProperty}");
+            Console.WriteLine("\n*\n*\n");
         }
     }
 }
