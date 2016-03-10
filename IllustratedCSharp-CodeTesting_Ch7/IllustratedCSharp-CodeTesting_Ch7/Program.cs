@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IllustratedCSharp_CodeTesting_Ch7
 {
@@ -40,6 +36,7 @@ namespace IllustratedCSharp_CodeTesting_Ch7
             Console.WriteLine($"Derived class -- Base Accessed field2: {base.field2}");
         }
     }
+
     class Program
     {
         static void Main(string[] args)
@@ -50,13 +47,26 @@ namespace IllustratedCSharp_CodeTesting_Ch7
             //Inheritance
             OC.Method1(OC.field1);      //Base method with base field
             OC.Method1(OC.field2);      //Base method with derived field
+            Console.WriteLine("\n*\n*\n");
+
             OC.Method2(OC.field1);      //Derived method with base field
             OC.Method2(OC.field2);      //Derived method with derived field
+            Console.WriteLine("\n*\n*\n");
 
             //Inheritance with two classes, masking a field and a method
             AC.Method1(AC.field1);      //Base method with base field
             AC.Method2(AC.field2);      //Masked method with masked derived field
             AC.Method3("");
+            Console.WriteLine("\n*\n*\n");
+
+
+            SecondDerived Derived = new SecondDerived();    //Used SecondDerived
+            MyBaseClass MyBC =  (MyBaseClass)Derived;       //Use MyBaseClas
+
+            Derived.Print();
+            MyBC.Print();
+            Console.WriteLine("\n*\n*\n");
+
         }
     }
 }
