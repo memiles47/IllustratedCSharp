@@ -11,7 +11,7 @@ namespace IllustratedCSharp_CodeTesting_Ch7
             Console.WriteLine($"Base class -- Method1: {value}");
         }
     }
-
+    //
     class OtherClass: SomeClass         //Derived class
     {
         public string field2 = "Derived class field";
