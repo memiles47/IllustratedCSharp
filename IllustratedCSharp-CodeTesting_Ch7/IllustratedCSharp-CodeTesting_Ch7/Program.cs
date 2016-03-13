@@ -12,7 +12,7 @@ namespace IllustratedCSharp_CodeTesting_Ch7
         }
     }
     //
-    class OtherClass: SomeClass         //Derived class
+    class OtherClass: SomeClass         //Derived class inheritance
     {
         public string field2 = "Derived class field";
 
