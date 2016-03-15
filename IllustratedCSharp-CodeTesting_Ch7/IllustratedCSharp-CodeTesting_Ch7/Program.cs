@@ -1,4 +1,5 @@
 ﻿using System;
+using IllustratecCSharp_Testing;
 
 namespace IllustratedCSharp_CodeTesting_Ch7
 {
@@ -43,6 +44,7 @@ namespace IllustratedCSharp_CodeTesting_Ch7
         {
             OtherClass OC = new OtherClass();
             AnotherClass AC = new AnotherClass();
+            WriteToConsole MP = new WriteToConsole();
 
             //Inheritance
             OC.Method1(OC.field1);      //Base method with base field
@@ -72,7 +74,7 @@ namespace IllustratedCSharp_CodeTesting_Ch7
             Console.WriteLine($"MyBC.myProperty = {MyBC.myProperty}");
             Console.WriteLine("\n*\n*\n");
 
-            //Next will be abstract modifiers
+            MP.MyPrint();
         }
     }
 }
