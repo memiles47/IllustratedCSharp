@@ -71,6 +71,8 @@ namespace IllustratedCSharp_CodeTesting_Ch7
             Console.WriteLine($"myDerived.myProperty = {myDerived.myProperty}");
             Console.WriteLine($"MyBC.myProperty = {MyBC.myProperty}");
             Console.WriteLine("\n*\n*\n");
+
+            //Next will be abstract modifiers
         }
     }
 }
