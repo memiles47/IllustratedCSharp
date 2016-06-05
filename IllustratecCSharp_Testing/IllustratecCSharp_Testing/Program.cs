@@ -12,6 +12,7 @@ namespace IllustratecCSharp_Testing
 
     class Program
     {
+        //Learning nrw tricks, now for resharper
         static void Main(string[] args)
         {
             WriteToConsole MP = new WriteToConsole();
