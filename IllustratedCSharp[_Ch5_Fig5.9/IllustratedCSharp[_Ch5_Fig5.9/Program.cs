@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace IllustratedCSharp__Ch5_Fig5._9
+namespace IllustratedCSharp__Ch5_Fig5._9 //Trying to remember what this program does
 {
 
     class MyClass { public int val = 20; }
