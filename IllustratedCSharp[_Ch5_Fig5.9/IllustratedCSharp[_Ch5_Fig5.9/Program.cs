@@ -7,7 +7,6 @@ namespace IllustratedCSharp__Ch5_Fig5._9
 
 
     class Program
-        //The program still runs!
     {
         static void RefAsParameter(MyClass f1)
         {
